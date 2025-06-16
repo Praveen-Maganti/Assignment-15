@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
-    
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     .background{
-        background-image:url("https://wallpapercave.com/wp/wp2548401.jpg");
+        background-image:url("https://www.pixelstalk.net/wp-content/uploads/images6/Dark-Souls-3-HD-Wallpaper-Free-download.jpg");
         height:100vh;
         width:100vw;
         background-size:cover;
@@ -31,17 +35,18 @@
         padding:0px 14px;
         border-radius:10px;
         margin-top:14px;
-        opacity:0.3px;
         height:8vh;
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     .HorizontalDiv{
         display:flex;
         flex-direction:row;
-        gap:50px;
         align-items:center;
         padding-top:20px;
-
+        justify-content:space-between;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .a{
@@ -52,11 +57,10 @@
     }
 
     .Horizontal-Nav{
-        display:flex;
-        flex-direction:row;
-        justify-content:flex-end;
-        gap:50px;
-        margin-left:410px;
+         display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
 
     .btn{
@@ -78,10 +82,14 @@
     .Center-HorizontalDiv{
         display:flex;
         flex-direction:row;
-        justify-content:center;
+        justify-content:space-between;
         align-items:center;
         margin-top:10px;
-
+        text-align:center;
+        margin:auto;
+        padding-left: 40px;
+        padding-right: 40px;
+        height:80vh;
     }
 
     .IconDiv{
@@ -93,7 +101,6 @@
         justify-content:center;
         align-items:center;
         background-color:transparent;
-        margin-top:220px;
     }
 
     .IconDiv:hover{
@@ -101,16 +108,17 @@
     }
 
     .Mheading{
-        color:rgb(27, 221, 205);
+        color:white;
         font-weight:bold;
         font-size:35px;
     }
 
     .p{
-        color:rgb(27, 221, 205);
+        color:white;
         font-weight:bold;
         text-align:center;
         font-size:22px;
+        padding:35px 0px;
     }
 
     .button{
@@ -123,7 +131,15 @@
         width:12vw;
     }
     .button:hover{
-        border:1px solid black;
+        border:2px solid black;
+    }
+    .centerContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding:20px 0px;
     }
 
 </style>
@@ -132,15 +148,15 @@
     <div class="background" id="Background">
         <div class="HorizontalDiv">
             <div class="headingDiv">
+                
                 <h1 class="flick">Flick<span class="span">Finder</span></h1>
+                
             </div>
             <div class="Horizontal-Nav">
                 <a class="a" href="nothning">Home</a>
                 <a  class="a" href="nothning">Tv Show</a>
                 <a  class="a" href="nothning">Movie</a>
                 <a  class="a" href="nothning">Upcoming</a>
-            </div>
-            <div>
                 <button class="btn">Favourite
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
                         <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
@@ -150,18 +166,18 @@
         </div>
         <hr style="border:2px solid rgb(33, 203, 141);margin-top:15px;">
         <div class="Center-HorizontalDiv">
-            <button class="IconDiv" style="margin-right:370px;" onclick="left()">
+            <button class="IconDiv" onclick="left()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" class="bi bi-chevron-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
                 </svg>
             </button>
 
-            <div style="text-align:center;align-items:center;margin-top:140px;">
+            <div class="centerContent">
                 <h1 class="Mheading">Bringing the Big Screen to Your Screen</h1>
-                <p class="p">Discover, critique, and celebrate movies <br> withhonest reviews and fresh takes on every film</p>
+                <p class="p">Discover, critique, and celebrate movies <br> with honest reviews and fresh takes on every film</p>
                 <button class="button">Discover More...</button>
             </div>
-            <button class="IconDiv" style="margin-left:370px;" onclick="right()">
+            <button class="IconDiv" onclick="right()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" class="bi bi-chevron-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
                 </svg>
@@ -175,10 +191,10 @@
 
 <script type="text/javascript">
     let count=0;
-    let arr=["https://wallpapercave.com/wp/wp2548401.jpg",
-            "https://wallpaper.dog/large/10855288.jpg",
-            "https://th.bing.com/th/id/OIP.rsGLP9hQ5PJvjDGAUa1DFAHaEK?w=2560&h=1440&rs=1&pid=ImgDetMain",
-            "https://wallpaperaccess.com/full/263149.jpg"
+    let arr=["https://www.pixelstalk.net/wp-content/uploads/images6/Dark-Souls-3-HD-Wallpaper-Free-download.jpg",
+            "https://www.pixelstalk.net/wp-content/uploads/images6/Gaming-Wallpaper-Desktop.jpg",
+            "https://www.pixelstalk.net/wp-content/uploads/images6/Dark-Souls-3-Wallpaper-HD-Free-download.png",
+            "https://www.pixelstalk.net/wp-content/uploads/images6/Cool-Gaming-Background-1.jpg"
         ];
 
     let image=document.getElementById("Background");
